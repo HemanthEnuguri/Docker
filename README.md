@@ -28,7 +28,7 @@ Make sure you have the following installed:
 
 ## Steps to Deploy the Application
 
-### 1. Create an Artifact Registry Docker Repository using Terraform
+### Create an Artifact Registry Docker Repository using Terraform
 
 First, you need to create a Docker repository in Google Artifact Registry to store your image. Here's the Terraform configuration to create the repository:
 
@@ -52,7 +52,7 @@ docker build -t us-central1-docker.pkg.dev/prefab-grid-455104-h7/guessthenumber/
 # Push the image to Artifact Registry
 docker push us-central1-docker.pkg.dev/prefab-grid-455104-h7/guessthenumber/guess-the-number-game:v1.5
 
-#Create a cloud run service
+# Create a cloud run service
 resource "google_cloud_run_service" "game_service" {
   name     = "guess-the-number-game"
   location = "us-central1"
@@ -74,7 +74,8 @@ resource "google_cloud_run_service" "game_service" {
     percent         = 100
   }
 }
+```
 
-#Play the game
+# Play the game
 Go to Cloud run in console find the link similar to https://guess-the-number-game-353918041635.us-central1.run.app/
 
