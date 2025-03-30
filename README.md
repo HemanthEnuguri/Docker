@@ -75,3 +75,6 @@ resource "google_cloud_run_service" "game_service" {
   }
 }
 
+#Play the game
+Go to Cloud run in console find the link similar to https://guess-the-number-game-353918041635.us-central1.run.app/
+
